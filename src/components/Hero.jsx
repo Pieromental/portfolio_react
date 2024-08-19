@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { shaq, bwmap, worldmap } from "../assets";
+import { shaq, bwmap, worldmap, psalazar } from "../assets";
 
 const Hero = () => {
   return (
@@ -50,7 +50,8 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-blue_1`}>
-              Desarrollador Full Stack Peruano<br className="sm:block hidden" />
+              Desarrollador Full Stack Peruano
+              <br className="sm:block hidden" />
               Apasionado por crear soluciones creativas e innovadoras.
             </p>
           </div>
@@ -90,12 +91,15 @@ const Hero = () => {
         {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
         <div>
           <img
-            className="absolute bottom-0 ml-[50vw] 
-            lg:ml-[75vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw]
-            sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
-            src={shaq}
+            className="absolute bottom-0 left-0 ml-[50vw] h-[50vh] 
+             sm:ml-[70vw] sm:h-[60vh] 
+             md:ml-[60vw] md:h-[70vh] 
+             lg:ml-[60vw] lg:h-[75vh]
+             xl:ml-[60vw] xl:h-[80vh]"
+            src={psalazar}
             alt="shaquille"
           />
+         
         </div>
       </section>
     </>

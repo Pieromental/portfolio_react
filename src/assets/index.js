@@ -7,6 +7,7 @@ import logo from './logo/logIconText.png';
 import logotext from './logo/logoText.png';
 
 import shaq from './personal/shaq.png';
+import psalazar from './personal/psalazar.png';
 
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
@@ -58,6 +59,7 @@ export {
   logo,
   logotext,
   shaq,
+  psalazar,
   backend,
   ux,
   frontend,

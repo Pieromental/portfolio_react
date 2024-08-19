@@ -29,16 +29,16 @@ const Contact = () => {
     //click on create a new template then click on save.
     emailjs
       .send(
-        'serviceID', // paste your ServiceID here (you'll get one when your service is created).
-        'templateID', // paste your TemplateID here (you'll find it under email templates).
+        'service_xeuqeaq', // paste your ServiceID here (you'll get one when your service is created).
+        'template_ey9bds7', // paste your TemplateID here (you'll find it under email templates).
         {
           from_name: form.name,
-          to_name: 'YourName', // put your name here.
+          to_name: 'Piero Salazar Calle', // put your name here.
           from_email: form.email,
-          to_email: 'youremail@gmail.com', //put your email here.
+          to_email: 'pieromental@gmail.com', //put your email here.
           message: form.message,
         },
-        'yourpublickey' //paste your Public Key here. You'll get it in your profile section.
+        'jl86SG7UXBE2wpjbz' //paste your Public Key here. You'll get it in your profile section.
       )
       .then(
         () => {
@@ -66,21 +66,21 @@ const Contact = () => {
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] bg-jet p-8 rounded-2xl">
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadTextLight}>Contact.</h3>
+        <p className={styles.sectionSubText}>¿Te interesa conocer más?</p>
+        <h3 className={styles.sectionHeadTextLight}>Contáctame</h3>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-10 flex flex-col gap-6 font-poppins">
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Your Name</span>
+            <span className="text-timberWolf font-medium mb-4">Tu nombre</span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your name?"
+              placeholder="¿Cuál es tu nombre?"
               className="bg-eerieBlack py-4 px-6
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
@@ -88,13 +88,13 @@ const Contact = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Your Email</span>
+            <span className="text-timberWolf font-medium mb-4">Tu correo</span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your email?"
+              placeholder="¿Cuál es tu correo?"
               className="bg-eerieBlack py-4 px-6
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
@@ -103,14 +103,14 @@ const Contact = () => {
           </label>
           <label className="flex flex-col">
             <span className="text-timberWolf font-medium mb-4">
-              Your Message
+              Tu mensaje
             </span>
             <textarea
               rows="7"
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What's your message?"
+              placeholder="¿Cuál es tu mensaje?"
               className="bg-eerieBlack py-4 px-6
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
@@ -135,7 +135,7 @@ const Contact = () => {
             onMouseOut={() => {
               document.querySelector('.contact-btn').setAttribute('src', send);
             }}>
-            {loading ? 'Sending' : 'Send'}
+            {loading ? 'Enviando' : 'Enviar'}
             <img
               src={send}
               alt="send"

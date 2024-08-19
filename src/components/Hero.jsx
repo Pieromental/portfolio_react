@@ -70,7 +70,7 @@ const Hero = () => {
           <a href="#about">
             <div
               className="w-[35px] h-[64px] rounded-3xl border-4 
-            border-french border-dim flex
+            border-blue_1 border-blue_2 flex
             justify-center items-start p-2"
             >
               <motion.div
@@ -82,7 +82,7 @@ const Hero = () => {
                   repeat: Infinity,
                   repeatType: "loop",
                 }}
-                className="w-3 h-3 rounded-full bg-taupe mb-1"
+                className="w-3 h-3 rounded-full bg-blue_3 mb-1"
               />
             </div>
           </a>

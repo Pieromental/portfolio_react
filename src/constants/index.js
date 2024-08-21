@@ -32,7 +32,8 @@ import {
   multi,
   agil,
   cloud,
-  analyst
+  analyst,
+  leader
 } from "../assets";
 
 export const navLinks = [
@@ -97,7 +98,7 @@ const services = [
   },
   {
     title: "Líder de Proyectos",
-    icon: agil,
+    icon: leader,
   },
   {
     title: "Experiencia en UI/UX",

@@ -13,6 +13,7 @@ import backend from './icons/backend.png';
 import ux from './icons/ux.png';
 import frontend from './icons/frontend.png';
 import analyst from './icons/analyst.png';
+import leader from './icons/leader.png';
 import english from './icons/english.png'
 import experience from './icons/experience.png';
 import multi from './icons/multiProgrammer.png';
@@ -109,5 +110,6 @@ export {
   multi,
   agil,
   cloud,
-  analyst
+  analyst,
+  leader
 };

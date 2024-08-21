@@ -12,6 +12,12 @@ import psalazar from './personal/psalazar.png';
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
 import frontend from './icons/frontend.png';
+import analyst from './icons/analyst.png';
+import english from './icons/english.png'
+import experience from './icons/experience.png';
+import multi from './icons/multiProgrammer.png';
+import agil from './icons/agil.png';
+import cloud from './icons/cloud.png';
 import prototyping from './icons/prototyping.png';
 import github from './icons/github.png';
 import close from './icons/close.png';
@@ -98,4 +104,10 @@ export {
   dcc,
   kelhel,
   microverse,
+  experience,
+  english,
+  multi,
+  agil,
+  cloud,
+  analyst
 };

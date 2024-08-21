@@ -34,7 +34,7 @@ export default {
         onyx: "#5b5b5b",
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #1f1f1f",
+        card: "10px 10px 21px 0px rgba(0,0,0,0.43)",
         cardLight: "0px 19px 38px #eaeaec, 0px 15px 12px #eaeaec",
       },
       screens: {

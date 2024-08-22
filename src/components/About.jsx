@@ -5,12 +5,15 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { Tilt } from "react-tilt";
+import "./About.css";
+import PropTypes from "prop-types";
 
-const ServiceCard = ({ index, title, icon }) => {
+
+const ServiceCard = ({ index, title, icon, description }) => {
   return (
     <motion.div
       variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-      className=" w-full card-gradient p-[1px] rounded-[20px] shadow-card"
+      className="  service-card w-full card-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <Tilt
         options={{
@@ -18,17 +21,29 @@ const ServiceCard = ({ index, title, icon }) => {
           scale: 1,
           speed: 450,
         }}
-        className="bg-blue_1 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+        className=" tilt-container bg-blue_1 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
-        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-        <h3 className="text-flashWhite text-[22px] font-bold text-center">
-          {title}
-        </h3>
+        <div className="content">
+          <div className="card-front">
+            <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+            <h3 className="text-flashWhite text-[22px] font-bold text-center">
+              {title}
+            </h3>
+          </div>
+          <div className="card-back">
+            <p className="text-flashWhite text-[18px] font-bold text-center">{description}</p>
+          </div>
+        </div>
       </Tilt>
     </motion.div>
   );
 };
-
+ServiceCard.propTypes = {
+  index: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 const About = () => {
   return (
     <div className="-mt-[6rem]">

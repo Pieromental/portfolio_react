@@ -33,7 +33,7 @@ import {
   agil,
   cloud,
   analyst,
-  leader
+  leader,
 } from "../assets";
 
 export const navLinks = [
@@ -75,34 +75,50 @@ const services = [
   {
     title: `${experience_time} Años de Experiencia`,
     icon: experience,
+    description:
+      "Avalado por mi trayectoria en diversas empresas de desarrollo.",
   },
   {
     title: "Inglés Avanzado C1",
     icon: english,
+    description:
+      "Inglés conversacional, con estudios culminados en ICPNA Chiclayo.",
   },
   {
     title: "Desarrollo Full Stack Web-Mobile",
     icon: multi,
+    description:
+      "Experto en bases de datos, APIs REST, y múltiples frameworks FrontEnd y Backend.",
   },
   {
     title: "Integración de Servicios en la Nube",
     icon: cloud,
+    description:
+      "Experiencia con Firebase y AWS (DynamoDB, S3).",
   },
   {
     title: "Trabajo en Entornos Ágiles",
     icon: agil,
+    description:
+      "Desarrollo siguiendo metodologías ágiles como SCRUM, CANVAS y RUP.",
   },
   {
     title: "Recopilación y Análisis de Requerimientos",
     icon: analyst,
+    description:
+      "Experiencia como Analista Desarrollador en la identificación de procesos y requerimientos.",
   },
   {
     title: "Líder de Proyectos",
     icon: leader,
+    description:
+      "Liderazgo demostrado en la gestión de equipos de trabajo.",
   },
   {
     title: "Experiencia en UI/UX",
     icon: ux,
+    description:
+      "Participación en el diseño de mockups.",
   },
 ];
 

@@ -1,0 +1,44 @@
+.service-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .card-front {
+    flex-direction: column;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .card-back {
+    opacity: 0;
+    z-index: 0;
+  }
+  
+  .tilt-container:hover .card-front {
+    opacity: 0;
+    z-index: 0;
+  }
+  
+  .tilt-container:hover .card-back {
+    opacity: 1;
+    z-index: 1;
+  }

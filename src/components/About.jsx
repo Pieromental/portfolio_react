@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+
+import { motion,AnimatePresence } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -11,6 +11,7 @@ import PropTypes from "prop-types";
 
 const ServiceCard = ({ index, title, icon, description }) => {
   return (
+    <AnimatePresence>
     <motion.div
       variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
       className="  service-card w-full card-gradient p-[1px] rounded-[20px] shadow-card"
@@ -36,6 +37,7 @@ const ServiceCard = ({ index, title, icon, description }) => {
         </div>
       </Tilt>
     </motion.div>
+    </AnimatePresence>
   );
 };
 ServiceCard.propTypes = {

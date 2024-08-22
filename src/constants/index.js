@@ -34,6 +34,7 @@ import {
   cloud,
   analyst,
   leader,
+ 
 } from "../assets";
 
 export const navLinks = [
@@ -93,8 +94,7 @@ const services = [
   {
     title: "Integración de Servicios en la Nube",
     icon: cloud,
-    description:
-      "Experiencia con Firebase y AWS (DynamoDB, S3).",
+    description: "Experiencia con Firebase y AWS (DynamoDB, S3).",
   },
   {
     title: "Trabajo en Entornos Ágiles",
@@ -111,14 +111,12 @@ const services = [
   {
     title: "Líder de Proyectos",
     icon: leader,
-    description:
-      "Liderazgo demostrado en la gestión de equipos de trabajo.",
+    description: "Liderazgo demostrado en la gestión de equipos de trabajo.",
   },
   {
     title: "Experiencia en UI/UX",
     icon: ux,
-    description:
-      "Participación en el diseño de mockups.",
+    description: "Participación en el diseño de mockups.",
   },
 ];
 
@@ -180,6 +178,7 @@ const technologies = [
     icon: docker,
   },
 ];
+
 
 const experiences = [
   {

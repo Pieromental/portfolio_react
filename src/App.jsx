@@ -6,8 +6,9 @@ import {
   Hero,
   Navbar,
   Tech,
-  Projects,
+  Projects
 } from './components';
+import SocialMediaMenu from './components/SocialMediaMenu';
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
         <div className="relative z-0">
           <Contact />
         </div>
+        <SocialMediaMenu />
       </div>
     </BrowserRouter>
   );

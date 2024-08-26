@@ -34,7 +34,16 @@ import {
   cloud,
   analyst,
   leader,
- 
+  angular,
+  vue,
+  dart,
+  php,
+  phyton,
+  django,
+  laravel,
+  flutter,
+  mssql,
+  springboot
 } from "../assets";
 
 export const navLinks = [
@@ -138,47 +147,87 @@ const technologies = [
     icon: typescript,
   },
   {
+    name: "PHP",
+    icon: php,
+  },
+  {
+    name: "Phyton",
+    icon: phyton,
+  },
+  {
+    name: "Dart",
+    icon: dart,
+  },
+  {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Angular",
+    icon: angular,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Vue",
+    icon: vue,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "Flutter",
+    icon: flutter,
   },
   {
-    name: "Rails",
-    icon: rubyrails,
+    name: "Django",
+    icon: django,
   },
   {
-    name: "graphql",
-    icon: graphql,
+    name: "Laravel",
+    icon: laravel,
   },
   {
-    name: "postgresql",
+    name: "SpringBoot",
+    icon: springboot,
+  },
+  
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
+  // {
+  //   name: "Tailwind CSS",
+  //   icon: tailwind,
+  // },
+  // {
+  //   name: "Node JS",
+  //   icon: nodejs,
+  // },
+  // {
+  //   name: "Rails",
+  //   icon: rubyrails,
+  // },
+  // {
+  //   name: "graphql",
+  //   icon: graphql,
+  // },
+  {
+    name: "Microsoft SQL",
+    icon: mssql,
+  },
+  {
+    name: "PostgreSQL",
     icon: postgresql,
   },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  // {
+  //   name: "Git",
+  //   icon: git,
+  // },
+  // {
+  //   name: "Figma",
+  //   icon: figma,
+  // },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
-
 
 const experiences = [
   {

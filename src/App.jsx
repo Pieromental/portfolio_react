@@ -27,9 +27,9 @@ const App = () => {
           <Tech />
         </div>
 
-        {/* <Projects />
+        <Projects />
 
-        <div
+        {/* <div
           className="bg-experience bg-cover bg-center bg-no-repeat 
             rounded-tl-[150px] rounded-br-[150px]">
           <div

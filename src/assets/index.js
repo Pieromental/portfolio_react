@@ -64,6 +64,10 @@ import kelhel from "./company/kelhel.png";
 import microverse from "./company/microverse.png";
 
 import komikult from "./projects/komikult.png";
+import reactEcommerce from "./projects/react_ecommerce.png";
+import flutterSimpleApp from "./projects/flutter_app.png";
+import angularIonic from "./projects/angular_ionic.png";
+import vueIonic from "./projects/vue_ionic.png";
 import leaderboard from "./projects/leaderboard.png";
 import math from "./projects/math-magicians.png";
 import movie from "./projects/movie-metro.png";
@@ -133,5 +137,9 @@ export {
   laravel,
   flutter,
   mssql,
-  springboot
+  springboot,
+  reactEcommerce,
+  flutterSimpleApp,
+  angularIonic,
+  vueIonic
 };

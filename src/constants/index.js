@@ -43,7 +43,11 @@ import {
   laravel,
   flutter,
   mssql,
-  springboot
+  springboot,
+  reactEcommerce,
+  flutterSimpleApp,
+  angularIonic,
+  vueIonic,
 } from "../assets";
 
 export const navLinks = [
@@ -186,7 +190,7 @@ const technologies = [
     name: "SpringBoot",
     icon: springboot,
   },
-  
+
   // {
   //   name: "Redux Toolkit",
   //   icon: redux,
@@ -263,8 +267,8 @@ const experiences = [
 const projects = [
   {
     id: "project-1",
-    name: "KomiKult",
-    description: "A comic characters list app that displays Marvel characters.",
+    name: "React Ecommerce",
+    description: "Un ecommerce básico desarrollado con React JS.",
     tags: [
       {
         name: "react",
@@ -279,15 +283,15 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: komikult,
-    repo: "https://github.com/shaqdeff/KomiKult",
-    demo: "https://shaqdeff.github.io/KomiKult/",
+    image: reactEcommerce,
+    repo: "https://github.com/Pieromental/react_prueba_tecnica",
+    demo: "https://react-simple-ecommerce-psalazar.netlify.app/",
   },
   {
     id: "project-2",
-    name: "Leaderboard",
+    name: "Flutter Basic App",
     description:
-      "A leaderboard list app that displays scores submitted by different players.",
+      "Una app con múltiples mini proyectos para demostrar mis destrezas en Flutter Framework.",
     tags: [
       {
         name: "react",
@@ -302,14 +306,15 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: leaderboard,
-    repo: "https://github.com/shaqdeff/Leaderboard",
-    demo: "https://shaqdeff.github.io/Leaderboard/",
+    image: flutterSimpleApp,
+    repo: "https://github.com/Pieromental/flutter_simple_app",
+    demo: "https://flutter-beginner-psalazar.netlify.app/",
   },
   {
     id: "project-3",
-    name: "Math Magicians",
-    description: "This is a single-page calculator app built with React",
+    name: "Angular-Ionic App",
+    description:
+      "Una app de noticias desarrollada con Ionic Framework usando Angular como lenguaje base.",
     tags: [
       {
         name: "nextjs",
@@ -324,14 +329,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: math,
-    repo: "https://github.com/shaqdeff/Math-Magicians",
-    demo: "https://inspiring-medovik-37d3b3.netlify.app/",
+    image: angularIonic,
+    repo: "",
+    demo: "https://ionic-app-noticias-5251d.web.app/tabs/tab1",
   },
   {
     id: "project-4",
-    name: "Movie Metro",
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
+    name: "Vue 3 Ionic App",
+    description: `Usando Ionic con Vue 3 intente emular el proceso de la famosa app de trabajos TaskRabbit. Intenta ingresar con las credenciales : Psalazar - 123456`,
     tags: [
       {
         name: "nextjs",
@@ -346,33 +351,33 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: movie,
-    repo: "https://github.com/shaqdeff/Movie-Metro",
-    demo: "https://movie-metro.netlify.app/",
+    image: vueIonic,
+    repo: "https://github.com/Pieromental/easy_job_vue_ionic_app",
+    demo: "https://ionic-easyjob-app.netlify.app/",
   },
-  {
-    id: "project-5",
-    name: "Nyeusi Fest Site",
-    description:
-      "This is a demo concert website for a music festival called Nyeusi.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: nyeusi,
-    repo: "https://github.com/shaqdeff/Nyeusi-Fest-Site",
-    demo: "https://shaqdeff.github.io/Nyeusi-Fest-Site/",
-  },
+  // {
+  //   id: "project-5",
+  //   name: "Nyeusi Fest Site",
+  //   description:
+  //     "This is a demo concert website for a music festival called Nyeusi.",
+  //   tags: [
+  //     {
+  //       name: "nextjs",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "supabase",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "css",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: nyeusi,
+  //   repo: "https://github.com/shaqdeff/Nyeusi-Fest-Site",
+  //   demo: "https://shaqdeff.github.io/Nyeusi-Fest-Site/",
+  // },
 ];
 
 export { services, technologies, experiences, projects };

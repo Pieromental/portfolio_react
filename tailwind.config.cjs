@@ -57,7 +57,7 @@ export default {
         hero: "linear-gradient(135deg, rgba(33,150,243,0.9) 0%, rgba(129,201,250,0.8) 60%, rgba(219,255,255,0.6) 60%)",
         "hero-mobile":
           "linear-gradient(137deg, rgba(33,150,243,0.9) 0%, rgba(129,201,250,0.7) 60%, rgba(219,255,255,0.5) 60%)",
-                tech: "linear-gradient(166deg, rgba(185,255,255,0.7) 0%, rgba(129,201,250,0.7) 75%), url('/src/assets/backgrounds/graduation.jpg')"
+        tech: "linear-gradient(166deg, rgba(185,255,255,0.7) 0%, rgba(129,201,250,0.7) 75%), url('/src/assets/backgrounds/graduation.jpg')",
       },
       fontFamily: {
         arenq: ["Arenq"],

@@ -48,6 +48,7 @@ import {
   flutterSimpleApp,
   angularIonic,
   vueIonic,
+  reactPortfolio,
 } from "../assets";
 
 export const navLinks = [
@@ -355,29 +356,29 @@ const projects = [
     repo: "https://github.com/Pieromental/easy_job_vue_ionic_app",
     demo: "https://ionic-easyjob-app.netlify.app/",
   },
-  // {
-  //   id: "project-5",
-  //   name: "Nyeusi Fest Site",
-  //   description:
-  //     "This is a demo concert website for a music festival called Nyeusi.",
-  //   tags: [
-  //     {
-  //       name: "nextjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: nyeusi,
-  //   repo: "https://github.com/shaqdeff/Nyeusi-Fest-Site",
-  //   demo: "https://shaqdeff.github.io/Nyeusi-Fest-Site/",
-  // },
+  {
+    id: "project-5",
+    name: "React Portfolio",
+    description:
+      "Mi portfolio en React , que usa diferentes bibliotecas interactivas y el cual estás usando mientras lees esto.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: reactPortfolio,
+    repo: "https://github.com/Pieromental/portfolio_react",
+    demo: "https://portfolio-psalazar.netlify.app/",
+  },
 ];
 
 export { services, technologies, experiences, projects };

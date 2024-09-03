@@ -49,6 +49,10 @@ import {
   angularIonic,
   vueIonic,
   reactPortfolio,
+  htec,
+  idesolutions,
+  leoncito,
+  agrobelen
 } from "../assets";
 
 export const navLinks = [
@@ -59,6 +63,10 @@ export const navLinks = [
   {
     id: "projects",
     title: "Proyectos",
+  },
+  {
+    id: "work",
+    title: "Experiencia",
   },
   {
     id: "contact",
@@ -236,33 +244,40 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Front-End Developer",
-    company_name: "Cover Hunt",
-    icon: coverhunt,
+    title: "Analista Programador Semi Senior",
+    company_name: "HTEC EIRL",
+    icon: htec,
     iconBg: "#333333",
-    date: "Aug 2021 - Feb 2022",
+    date: "Abril 2023 - Presente",
   },
   {
-    title: "Mentor (Volunteer)",
-    company_name: "Microverse",
-    icon: microverse,
+    title: "Pasante Full Stack",
+    company_name: "IDE SOLUTIONS SAC",
+    icon: idesolutions,
     iconBg: "#333333",
-    date: "Mar 2022 - May 2022",
+    date: "Enero 2023 - Abril 2023",
   },
   {
-    title: "Junior Software Engineer",
-    company_name: "Kelhel",
-    icon: kelhel,
+    title: "Desarrollador FrontEnd",
+    company_name: "GRUPO LEONCITO SAC",
+    icon: leoncito,
     iconBg: "#333333",
-    date: "May 2022 - Oct 2022",
+    date: "Abril 2022 - Abril 2023",
   },
   {
-    title: "Full Stack Developer",
-    company_name: "Diversity Cyber Council",
-    icon: dcc,
+    title: "Jefe de Tienda",
+    company_name: "AGROBELEN SAC",
+    icon: agrobelen,
     iconBg: "#333333",
-    date: "Sep 2022 - Present",
+    date: "Enero 2020 - Abril 2022",
   },
+  // {
+  //   title: "Vendedor de Servicios de Red",
+  //   company_name: "LIDER EN INFORMATICA Y TELECOMONUNICACIONES EIRL",
+  //   icon: dcc,
+  //   iconBg: "#333333",
+  //   date: "Enero 2020 - Marzo 2020",
+  // },
 ];
 
 const projects = [

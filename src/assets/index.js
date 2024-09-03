@@ -57,6 +57,10 @@ import laravel from "./tech/laravel.png";
 import flutter from "./tech/flutter.png";
 import mssql from "./tech/mssql.png";
 import springboot from "./tech/springboot.png";
+import htec from "./tech/htec.png";
+import idesolutions from "./tech/idesolutions.png";
+import leoncito from "./tech/leoncito.png";
+import agrobelen from "./company/agrobelen.png";
 
 import coverhunt from "./company/coverhunt.png";
 import dcc from "./company/dcc.png";
@@ -143,5 +147,9 @@ export {
   flutterSimpleApp,
   angularIonic,
   vueIonic,
-  reactPortfolio
+  reactPortfolio,
+  htec,
+  idesolutions,
+  leoncito,
+  agrobelen
 };

@@ -1,88 +1,68 @@
-import React, { Suspense, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import {
-  Decal,
-  Float,
-  OrbitControls,
-  Preload,
-  useTexture,
-} from '@react-three/drei';
-import Loader from '../Loader';
-import PropTypes from 'prop-types';
-import Tooltip from '@mui/material/Tooltip';
+import React, { useMemo, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Text, useTexture } from "@react-three/drei";
+import * as THREE from "three";
+import { technologies } from "../../constants";
 
-const Ball = ({ imgUrl, setTooltipVisible }) => {
-  const [decal] = useTexture([imgUrl]);
+const TechIcon = ({ position, imgUrl, name }) => {
+  const meshRef = useRef();
+  const texture = useTexture(imgUrl || 'path-to-default-image.png'); // Usa una imagen por defecto si no se carga la URL
+
+  // Controla la animación para hacerla más dinámica
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime();
+    meshRef.current.position.y = position[1] + Math.sin(t + position[0]) * 0.2;
+  });
 
   return (
-    <Float speed={2.5} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
-      <mesh
-        castShadow
-        receiveShadow
-        scale={2.75}
-        onPointerOver={() => setTooltipVisible(true)} // Mostrar tooltip al pasar el ratón
-        onPointerOut={() => setTooltipVisible(false)} // Ocultar tooltip al sacar el ratón
-      >
-        <icosahedronGeometry args={[1, 2]} />
-        <meshStandardMaterial
-          color="#8ca3ad"
-          polygonOffset
-          polygonOffsetFactor={-5}
-          flatShading
-        />
-        <Decal
-          position={[0, 0, 1]}
-          rotation={[2 * Math.PI, 0, 6.25]}
-          flatShading
-          map={decal}
-        />
+    <group position={position}>
+      <mesh ref={meshRef}>
+        {/* Reduce el tamaño del plano para evitar que cubra el texto */}
+        <planeGeometry args={[5, 5]} />
+        <meshBasicMaterial map={texture} transparent />
       </mesh>
-    </Float>
+     
+    </group>
   );
 };
 
-Ball.propTypes = {
-  imgUrl: PropTypes.string.isRequired,
-  setTooltipVisible: PropTypes.func.isRequired,
-};
+const TechScene = () => {
+  const icons = useMemo(() => {
+    const itemsPerRow = 6;
+    const spacingX = 7; // Reduce el espaciado horizontal entre iconos
+    const spacingY = 3; // Reduce el espaciado vertical entre filas
 
-const BallCanvas = ({ icon,name }) => {
-  const [tooltipVisible, setTooltipVisible] = useState(false);
+    return technologies.map((tech, index) => {
+      const row = Math.floor(index / itemsPerRow);
+      const col = index % itemsPerRow;
+      const x = (col - itemsPerRow / 2 + 0.5) * spacingX;
+      const y = (row - itemsPerRow / 2 + 0.5) * -spacingY;
+      return (
+        <TechIcon
+          key={tech.name}
+          position={[x, y, 0]}
+          imgUrl={tech.icon}
+          name={tech.name}
+        />
+      );
+    });
+  }, []);
 
   return (
     <>
-      <Tooltip 
-        title={name} 
-        open={tooltipVisible} 
-        placement='top'
-        // Aplica el estilo para cambiar el tamaño de la fuente
-        componentsProps={{
-          tooltip: {
-            sx: {
-              fontSize: '1rem', // Cambia el tamaño de fuente aquí
-            },
-          },
-        }}
-      >
-        <div style={{ width: '100%', height: '100%' }}>
-          <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
-            <Suspense fallback={<Loader />}>
-              <OrbitControls enableZoom={false} />
-              <Ball imgUrl={icon} setTooltipVisible={setTooltipVisible} />
-            </Suspense>
-            <Preload all />
-          </Canvas>
-        </div>
-      </Tooltip>
+      <ambientLight intensity={0.8} /> {/* Ajusta la intensidad de la luz */}
+      <directionalLight position={[5, 5, 5]} intensity={0.5} /> {/* Añade una luz direccional */}
+      {icons}
     </>
   );
 };
 
-BallCanvas.propTypes = {
-  icon: PropTypes.string.isRequired,
-  name:PropTypes.string.isRequired
-};
+const TechSceneWrapper = () => (
+  <div style={{ width: "100%", height: "100%" }}> {/* Ocupa toda la altura disponible */}
+    <Canvas camera={{ position: [0, 0, 25], fov: 70 }}> {/* Ajusta la posición de la cámara */}
+      <TechScene />
+    </Canvas>
+  </div>
+);
 
-export default BallCanvas;
+export default TechSceneWrapper;

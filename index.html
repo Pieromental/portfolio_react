@@ -12,7 +12,15 @@
   </body>
 </html>
 <style scoped>
-body{
-  overflow-x: hidden;
-}
+  body {
+    overflow-x: hidden; /* Mantener oculto el scroll horizontal */
+    overflow-y: scroll; /* Mantener el scroll funcional */
+
+    -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+  }
+
+  /* Ocultar el scrollbar en navegadores Webkit (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    display: none;
+  }
 </style>

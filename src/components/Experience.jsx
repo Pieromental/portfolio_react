@@ -5,10 +5,25 @@ import {
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
+import { styled } from "@mui/material/styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { download, downloadHover, resume } from "../assets";
 import { textVariant } from "../utils/motion";
+import { BiDownload } from "react-icons/bi";
+import Button from "@mui/material/Button";
+
+const ColorButton = styled(Button)(({ theme }) => ({
+  border: "10px  ",
+  fontFamily: "Beckman",
+  fontWeight: "bold",
+  color: "#d4d4d8",
+  backgroundColor: "#333333",
+  "&:hover": {
+    backgroundColor: "#858585",
+    color: "#1f1f1f",
+  },
+}));
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -94,40 +109,16 @@ const Experience = () => {
               </div>
             }
           >
-            <button
-              className="live-demo flex justify-between items-center
-              sm:text-[18px] text-[14px] text-timberWolf 
-              font-bold font-beckman items-center py-5 pl-3 pr-3 
-              whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
-              w-[125px] h-[46px] rounded-[10px] bg-jetLight 
-              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] 
-              ease-in-out"
-              onClick={() =>
-                window.open(
-                  "https://firebasestorage.googleapis.com/v0/b/personal-storage-7264b.appspot.com/o/CV%20PIERO%20SALAZAR.pdf?alt=media&token=a6f0baf0-1ec9-4093-8d19-fb2c46e5e801", //paste the link to your resume here
-                  "_blank"
-                )
-              }
-              onMouseOver={() => {
-                document
-                  .querySelector(".download-btn")
-                  .setAttribute("src", downloadHover);
-              }}
-              onMouseOut={() => {
-                document
-                  .querySelector(".download-btn")
-                  .setAttribute("src", download);
-              }}
+            <ColorButton
+              size="large"
+              href="https://firebasestorage.googleapis.com/v0/b/personal-storage-7264b.appspot.com/o/CV%20PIERO%20SALAZAR.pdf?alt=media&token=a6f0baf0-1ec9-4093-8d19-fb2c46e5e801"
+              variant="contained"
+              endIcon={<BiDownload />}
             >
-              Mi CV
-              <img
-                src={download}
-                alt="download"
-                className="download-btn sm:w-[26px] sm:h-[26px] 
-                w-[23px] h-[23px] object-contain"
-              />
-            </button>
+              Mi Curriculum
+            </ColorButton>
+
+            
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>

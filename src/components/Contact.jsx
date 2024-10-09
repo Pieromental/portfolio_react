@@ -7,7 +7,7 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { LoadingButton } from "@mui/lab";
 import { BiMailSend } from "react-icons/bi";
-
+import { Snackbar, Alert } from "@mui/material";
 const CustomLoadingButton = styled(LoadingButton)(({ theme }) => ({
   backgroundColor: "#141414",
   fontWeight: "bold",
@@ -31,49 +31,56 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
   const handleChange = (e) => {
     const { name, value } = e.target;
 
     setForm({ ...form, [name]: value });
   };
-
-  const handleSubmit = (e) => {
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false); // Cerrar el Snackbar
+  };
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    // sign up on emailjs.com (select the gmail service and connect your account).
-    //click on create a new template then click on save.
-    emailjs
-      .send(
-        "service_xeuqeaq", // paste your ServiceID here (you'll get one when your service is created).
-        "template_ey9bds7", // paste your TemplateID here (you'll find it under email templates).
+    try {
+      // Enviar el correo usando emailjs
+      await emailjs.send(
+        "service_xeuqeaq", // Coloca tu ServiceID aquí
+        "template_ey9bds7", // Coloca tu TemplateID aquí
         {
           from_name: form.name,
-          to_name: "Piero Salazar Calle", // put your name here.
+          to_name: "Piero Salazar Calle", // Pon tu nombre aquí
           from_email: form.email,
-          to_email: "pieromental@gmail.com", //put your email here.
+          to_email: "pieromental@gmail.com", // Pon tu correo aquí
           message: form.message,
         },
-        "jl86SG7UXBE2wpjbz" //paste your Public Key here. You'll get it in your profile section.
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.log(error);
-          alert("Something went wrong. Please try again.");
-        }
+        "jl86SG7UXBE2wpjbz" // Coloca tu Public Key aquí
       );
+
+      // Si el envío es exitoso
+      setLoading(false);
+      setSnackbarMessage("¡El mensaje fue enviado con éxito!");
+      setSnackbarSeverity("success");
+      setOpenSnackbar(true); // Mostrar el Snackbar con mensaje de éxito
+
+      // Reiniciar el formulario
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      // Si ocurre un error en el envío del correo
+      setLoading(false);
+      setSnackbarMessage("Algo salió mal. Por favor, inténtalo de nuevo.");
+      setSnackbarSeverity("error");
+      setOpenSnackbar(true); // Mostrar el Snackbar con mensaje de error
+      console.error("Error al enviar el correo:", error);
+    }
   };
 
   return (
@@ -149,6 +156,20 @@ const Contact = () => {
           </CustomLoadingButton>
         </form>
       </motion.div>
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={3000} // Duración de la alerta (3 segundos)
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbarSeverity} // Cambiar el color basado en la severidad
+          sx={{ width: "100%" }}
+        >
+          {snackbarMessage} {/* Mostrar el mensaje del Snackbar */}
+        </Alert>
+      </Snackbar>
     </div>
   );
 };

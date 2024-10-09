@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { shaq, bwmap, worldmap, psalazar } from "../assets";
+import {  bwmap, worldmap, psalazar } from "../assets";
 
 const Hero = () => {
   return (
@@ -97,7 +95,7 @@ const Hero = () => {
              lg:ml-[60vw] lg:h-[75vh]
              xl:ml-[60vw] xl:h-[80vh]"
             src={psalazar}
-            alt="shaquille"
+            alt="pieromental"
           />
          
         </div>

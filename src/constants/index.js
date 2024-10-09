@@ -52,7 +52,7 @@ import {
   htec,
   idesolutions,
   leoncito,
-  agrobelen
+  agrobelen,
 } from "../assets";
 
 export const navLinks = [
@@ -204,26 +204,6 @@ const technologies = [
     icon: springboot,
   },
 
-  // {
-  //   name: "Redux Toolkit",
-  //   icon: redux,
-  // },
-  // {
-  //   name: "Tailwind CSS",
-  //   icon: tailwind,
-  // },
-  // {
-  //   name: "Node JS",
-  //   icon: nodejs,
-  // },
-  // {
-  //   name: "Rails",
-  //   icon: rubyrails,
-  // },
-  // {
-  //   name: "graphql",
-  //   icon: graphql,
-  // },
   {
     name: "Microsoft SQL",
     icon: mssql,
@@ -232,10 +212,10 @@ const technologies = [
     name: "PostgreSQL",
     icon: postgresql,
   },
-  // {
-  //   name: "Git",
-  //   icon: git,
-  // },
+  {
+    name: "Git",
+    icon: git,
+  },
   // {
   //   name: "Figma",
   //   icon: figma,
@@ -275,13 +255,6 @@ const experiences = [
     iconBg: "#333333",
     date: "Enero 2020 - Abril 2022",
   },
-  // {
-  //   title: "Vendedor de Servicios de Red",
-  //   company_name: "LIDER EN INFORMATICA Y TELECOMONUNICACIONES EIRL",
-  //   icon: dcc,
-  //   iconBg: "#333333",
-  //   date: "Enero 2020 - Marzo 2020",
-  // },
 ];
 
 const projects = [
@@ -400,4 +373,8 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+const urls = {
+  MYCV: "https://raw.githubusercontent.com/Pieromental/portfolio_react/pieromental/docs/CV_PIERO_SALAZAR.pdf",
+};
+
+export { services, technologies, experiences, projects, urls };

@@ -8,10 +8,28 @@ import { styles } from "../styles";
 import { styled } from "@mui/material/styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { download, downloadHover, resume } from "../assets";
+import { resume } from "../assets";
 import { textVariant } from "../utils/motion";
 import { BiDownload } from "react-icons/bi";
+import { urls } from "../constants";
 import Button from "@mui/material/Button";
+
+const downloadPDF = async (url) => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("No se pudo descargar el archivo");
+    }
+    const blob = await response.blob();
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "PIERO_SALAZAR_CV.pdf"; // Cambia el nombre si lo deseas
+    link.click();
+    URL.revokeObjectURL(link.href);
+  } catch (error) {
+    console.error("Error al descargar el archivo PDF:", error);
+  }
+};
 
 const ColorButton = styled(Button)(({ theme }) => ({
   border: "10px  ",
@@ -111,14 +129,12 @@ const Experience = () => {
           >
             <ColorButton
               size="large"
-              href="https://firebasestorage.googleapis.com/v0/b/personal-storage-7264b.appspot.com/o/CV%20PIERO%20SALAZAR.pdf?alt=media&token=a6f0baf0-1ec9-4093-8d19-fb2c46e5e801"
+              onClick={() => downloadPDF(urls.MYCV)}
               variant="contained"
               endIcon={<BiDownload />}
             >
               Mi Curriculum
             </ColorButton>
-
-            
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>

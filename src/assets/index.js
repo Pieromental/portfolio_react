@@ -1,8 +1,6 @@
-// import bwmap from './backgrounds/NazcaLines.png';
 import bwmap from "./backgrounds/bw-map.jpeg";
 import nairobi from "./backgrounds/nairobi.png";
 import whiteabstract from "./backgrounds/white-abstract.png";
-// import worldmap from './backgrounds/NazcaLinesFilled.png';
 import worldmap from "./backgrounds/world-map.png";
 
 import logo from "./logo/logIconText.png";

@@ -13,6 +13,7 @@
     "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@mui/lab": "^5.0.0-alpha.110",
     "@mui/material": "^5.16.7",
     "@react-three/drei": "^9.66.1",
     "@react-three/fiber": "^8.13.0",

@@ -67,6 +67,7 @@ import microverse from "./company/microverse.png";
 
 import komikult from "./projects/komikult.png";
 import reactEcommerce from "./projects/react_ecommerce.png";
+import imagenMundo from "./projects/imagen_mundo_app.png";
 import flutterSimpleApp from "./projects/flutter_app.png";
 import angularIonic from "./projects/angular_ionic.png";
 import vueIonic from "./projects/vue_ionic.png";
@@ -142,6 +143,7 @@ export {
   mssql,
   springboot,
   reactEcommerce,
+  imagenMundo,
   flutterSimpleApp,
   angularIonic,
   vueIonic,

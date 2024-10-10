@@ -53,6 +53,7 @@ import {
   idesolutions,
   leoncito,
   agrobelen,
+  imagenMundo
 } from "../assets";
 
 export const navLinks = [
@@ -260,6 +261,28 @@ const experiences = [
 const projects = [
   {
     id: "project-1",
+    name: "Imágenes del Mundo",
+    description: "Aplicación para consulta de imágenes desarrolada con Vu3 , Quasar y Pinia.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: imagenMundo,
+    repo: "https://github.com/Pieromental/friendship_project",
+    demo: "https://alegra-frontend-test-ix631zbrs-pieromentals-projects.vercel.app/",
+  },
+  {
+    id: "project-2",
     name: "React Ecommerce",
     description: "Un ecommerce básico desarrollado con React JS.",
     tags: [
@@ -281,7 +304,7 @@ const projects = [
     demo: "https://react-simple-ecommerce-psalazar.netlify.app/",
   },
   {
-    id: "project-2",
+    id: "project-3",
     name: "Flutter Basic App",
     description:
       "Una app con múltiples mini proyectos para demostrar mis destrezas en Flutter Framework.",
@@ -304,7 +327,7 @@ const projects = [
     demo: "https://flutter-beginner-psalazar.netlify.app/",
   },
   {
-    id: "project-3",
+    id: "project-4",
     name: "Angular-Ionic App",
     description:
       "Una app de noticias desarrollada con Ionic Framework usando Angular como lenguaje base.",
@@ -327,9 +350,9 @@ const projects = [
     demo: "https://ionic-app-noticias-5251d.web.app/tabs/tab1",
   },
   {
-    id: "project-4",
-    name: "Vue 3 Ionic App",
-    description: `Usando Ionic con Vue 3 intente emular el proceso de la famosa app de trabajos TaskRabbit. Intenta ingresar con las credenciales : Psalazar - 123456`,
+    id: "project-5",
+    name: "EasyJob",
+    description: `App desarollada con Vue3 y Ionic que emula el proceo de trabajos TaskRabbit. Intenta ingresar con las credenciales : Psalazar - 123456`,
     tags: [
       {
         name: "nextjs",
@@ -349,7 +372,7 @@ const projects = [
     demo: "https://ionic-easyjob-app.netlify.app/",
   },
   {
-    id: "project-5",
+    id: "project-6",
     name: "React Portfolio",
     description:
       "Mi portfolio en React , que usa diferentes bibliotecas interactivas y el cual estás usando mientras lees esto.",

@@ -17,6 +17,7 @@ import Button from "@mui/material/Button";
 
 const downloadPDF = async (url) => {
   try {
+    console.log(url)
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error("No se pudo descargar el archivo");

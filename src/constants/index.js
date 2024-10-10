@@ -374,7 +374,7 @@ const projects = [
 ];
 
 const urls = {
-  MYCV: "https://github.com/Pieromental/portfolio_react/blob/pieromental/src/assets/personal/PIERO_SALAZAR_CV.pdf",
+  MYCV: "/PIERO_SALAZAR_CV.pdf",
 };
 
 export { services, technologies, experiences, projects, urls };

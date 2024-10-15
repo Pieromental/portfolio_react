@@ -9,17 +9,17 @@ import { LoadingButton } from "@mui/lab";
 import { BiMailSend } from "react-icons/bi";
 import { Snackbar, Alert } from "@mui/material";
 const CustomLoadingButton = styled(LoadingButton)(({ theme }) => ({
-  backgroundColor: "#141414",
+  backgroundColor: "#003785",
   fontWeight: "bold",
   fontFamily: "Beckman",
-  color: "#d4d4d8",
+  color: "#f4f4f6",
   "&:hover": {
-    backgroundColor: "#858585",
+    backgroundColor: "#1465bb",
     color: "#1f1f1f",
   },
   "&.Mui-disabled": {
-    backgroundColor: "#444444",
-    color: "#888888",
+    backgroundColor: "#b9ffff",
+    color: "#003785",
   },
 }));
 
@@ -90,7 +90,7 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-jet p-8 rounded-2xl"
+        className="flex-[0.75] bg-blue_4 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>¿Te interesa conocer más?</p>
         <h3 className={styles.sectionHeadTextLight}>Contáctame</h3>
@@ -101,44 +101,44 @@ const Contact = () => {
           className="mt-10 flex flex-col gap-6 font-poppins"
         >
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Tu nombre</span>
+            <span className="text-blue_1 font-medium mb-4">Tu nombre</span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="¿Cuál es tu nombre?"
-              className="bg-eerieBlack py-4 px-6
+              className="bg-platinumLight py-4 px-6
               placeholder:text-taupe
-              text-timberWolf rounded-lg outline-none
+              text-blue_1 rounded-lg outline-none
               border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Tu correo</span>
+            <span className="text-blue_1 font-medium mb-4">Tu correo</span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="¿Cuál es tu correo?"
-              className="bg-eerieBlack py-4 px-6
+              className="bg-platinumLight py-4 px-6
               placeholder:text-taupe
-              text-timberWolf rounded-lg outline-none
+              text-blue_1 rounded-lg outline-none
               border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Tu mensaje</span>
+            <span className="text-blue_1 font-medium mb-4">Tu mensaje</span>
             <textarea
               rows="7"
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="¿Cuál es tu mensaje?"
-              className="bg-eerieBlack py-4 px-6
+              className="bg-platinumLight py-4 px-6
               placeholder:text-taupe
-              text-timberWolf rounded-lg outline-none
+              text-blue_1 rounded-lg outline-none
               border-none font-medium resize-none"
             />
           </label>

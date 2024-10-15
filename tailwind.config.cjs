@@ -51,9 +51,9 @@ export default {
         about:
           "linear-gradient(165deg, rgba(244,244,246,1) 100%, rgba(122,122,122,1) 100%)",
         experience:
-          "linear-gradient(135deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.2) 100%),url('/src/assets/backgrounds/white-abstract.png')",
+          "linear-gradient(135deg, rgba(20,101,187,0.66) 60%, rgba(10,10,10,0.2) 100%),url('/src/assets/backgrounds/white-abstract.png')",
         experienceLight:
-          "linear-gradient(137deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.9) 60%)",
+          "linear-gradient(137deg, rgba(185,255,255,0.55) 60%, rgba(33,150,243,0.5159313725490196) 61%)",
         hero: "linear-gradient(135deg, rgba(33,150,243,0.9) 0%, rgba(129,201,250,0.8) 60%, rgba(219,255,255,0.6) 60%)",
         "hero-mobile":
           "linear-gradient(137deg, rgba(33,150,243,0.9) 0%, rgba(129,201,250,0.7) 60%, rgba(219,255,255,0.5) 60%)",

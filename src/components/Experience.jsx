@@ -13,7 +13,7 @@ import { textVariant } from "../utils/motion";
 import { BiDownload } from "react-icons/bi";
 import { urls } from "../constants";
 import Button from "@mui/material/Button";
-
+import { LiaFilePowerpoint } from "react-icons/lia";
 
 const downloadPDF = async (url) => {
   try {
@@ -38,9 +38,9 @@ const ColorButton = styled(Button)(({ theme }) => ({
   fontFamily: "Beckman",
   fontWeight: "bold",
   color: "#d4d4d8",
-  backgroundColor: "#333333",
+  backgroundColor: "#003785",
   "&:hover": {
-    backgroundColor: "#858585",
+    backgroundColor: "#1465bb",
     color: "#1f1f1f",
   },
 }));
@@ -69,7 +69,7 @@ const ExperienceCard = ({ experience }) => (
         <img
           src={experience.icon}
           alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
+          className="w-[70%] h-[70%] object-contain"
         />
       </div>
     }
@@ -118,13 +118,13 @@ const Experience = () => {
             contentArrowStyle={{
               borderRight: "7px solid  #232631",
             }}
-            iconStyle={{ background: "#333333" }}
+            iconStyle={{ background: "#f2f2f2" }}
             icon={
               <div className="flex justify-center items-center w-full h-full">
                 <img
                   src={resume}
                   alt="resume"
-                  className="w-[45%] h-[45%] object-contain"
+                  className="w-[70%] h-[70%] object-contain"
                 />
               </div>
             }
